@@ -5,6 +5,7 @@ set -e
 log "Initializing Terraform"
 terraform init
 # Check whether the configuration is valid
+log "Validating configuration"
 terraform validate
 # Show changes required by the current configuration
 terraform plan
