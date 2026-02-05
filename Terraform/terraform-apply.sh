@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # a bash script to automate terraform deployment
 
 set -e
