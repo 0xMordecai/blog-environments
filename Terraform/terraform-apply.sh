@@ -8,6 +8,7 @@ terraform init
 log "Validating configuration"
 terraform validate
 # Show changes required by the current configuration
+log "Creating plan"
 terraform plan
 # Create or update infrastructure
 terraform apply
