@@ -11,4 +11,5 @@ terraform validate
 log "Creating plan"
 terraform plan
 # Create or update infrastructure
+log "Applying plan"
 terraform apply
