@@ -1,5 +1,17 @@
-variable "instance_type" {
-  type        = string                     # The type of the variable, in this case a string
-  default     = "t2.micro"                 # Default value for the variable
-  description = "The type of EC2 instance" # Description of what this variable represents
+variable "branch" {
+  description = "branch"
+  type        = string
+  default     = "dev"
+}
+
+variable "cluster_name" {
+  description = "cluster name"
+  type        = string
+  default     = "project-cluster"
+}
+
+variable "node_image" {
+  description = "node image"
+  type = string
+  default = "kindest/node:v1.34.3"
 }
