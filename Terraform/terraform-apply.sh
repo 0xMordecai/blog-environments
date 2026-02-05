@@ -2,6 +2,10 @@
 # a bash script to automate terraform deployment
 
 set -e
+# Helpers
+log() {
+  echo "[INFO] $1"
+}
 # Prepare your working directory for other commands
 log "Initializing Terraform"
 terraform init
