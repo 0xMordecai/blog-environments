@@ -13,3 +13,5 @@ terraform plan
 # Create or update infrastructure
 log "Applying plan"
 terraform apply
+
+log "Cluster creation completed successfully"
