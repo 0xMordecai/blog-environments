@@ -17,6 +17,6 @@ log "Creating plan"
 terraform plan
 # Create or update infrastructure
 log "Applying plan"
-terraform apply
+terraform apply -auto-approve
 
 log "Cluster creation completed successfully"
