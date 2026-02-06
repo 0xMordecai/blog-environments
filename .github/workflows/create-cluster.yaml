@@ -17,3 +17,6 @@ jobs:
       - name: Apply Terraform 
         working-directory: ./Terraform
         run: terraform init && terraform apply -auto-approve -var="branch=${GITHUB_REF##*/}"
+      - name: Check kubectl version
+        id: check-kubectl-version
+        run: kubectl version
