@@ -7,13 +7,13 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install terraform
         id: install-terraform
-        run: sh ./scripts/install-terraform.sh
+        run: sh ./Terraform/scripts/install-terraform.sh
       - name: Install KinD
         id: install-kind
-        run: sh ./scripts/install-KinD.sh
+        run: sh ./Terraform/scripts/install-KinD.sh
       - name: Apply Terraform 
         id: apply-terraform 
-        run: sh ./scripts/terraform-apply.sh
+        run: sh ./Terraform/scripts/terraform-apply.sh
       - name: Install argoCD
         id: install-argocd
-        run: sh install-argocd.sh
+        run: sh ./Manifest/argoCD/install-argocd.sh
