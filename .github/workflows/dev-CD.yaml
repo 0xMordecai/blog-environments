@@ -11,3 +11,4 @@ jobs:
     name: Install argoCD
     needs: [dev-environment-infrastructure]
     uses: ./.github/workflows/install-argocd.yaml
+    secrets: inherit
