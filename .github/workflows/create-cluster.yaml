@@ -17,3 +17,13 @@ jobs:
       - name: Apply Terraform 
         id: apply-terraform 
         run: sh ./scripts/terraform-apply.sh
+  setup-argocd:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./Manifest/argoCD
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install argoCD
+        id: install-argocd
+        run: sh install-argocd.sh
