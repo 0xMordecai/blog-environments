@@ -3,3 +3,11 @@ on: [workflow_call]
 jobs:
   setup-argocd:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./Manifest/argoCD
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install argoCD
+        id: install-argocd
+        run: sh install-argocd.sh
