@@ -17,6 +17,6 @@ log "Creating plan"
 terraform plan
 # Create or update infrastructure
 log "Applying plan"
-terraform apply -auto-approve
+terraform apply -auto-approve -var="branch=${GITHUB_REF##*/}"
 
 log "Cluster creation completed successfully"
