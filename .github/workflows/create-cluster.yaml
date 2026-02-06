@@ -13,7 +13,7 @@ jobs:
         run: sh ./scripts/install-terraform.sh
       - name: Install KinD
         id: install-kind
-        run: sh /scripts/install-KinD.sh
+        run: sh ./scripts/install-KinD.sh
       - name: Apply Terraform 
         id: apply-terraform 
         run: sh ./scripts/terraform-apply.sh
