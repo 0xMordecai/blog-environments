@@ -1,2 +1,5 @@
 name: Install argoCD
 on: [workflow_call]
+jobs:
+  setup-argocd:
+    runs-on: ubuntu-latest
