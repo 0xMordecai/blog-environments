@@ -1,0 +1,13 @@
+name: Create kubernetes cluster
+on : [workflow_call]
+jobs:
+  apply-terraform-infrastructure:
+    runs-on: ubuntu-lates
+    defaults:
+      run:
+        working-directory: ./terraform
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ./terraform
+        id: install-terraform
+        run: sh /scripts/install-terraform.sh
