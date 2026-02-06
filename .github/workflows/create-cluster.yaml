@@ -2,7 +2,7 @@ name: Create kubernetes cluster
 on : [workflow_call]
 jobs:
   apply-terraform-infrastructure:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./terraform
