@@ -13,7 +13,8 @@ jobs:
         run: sh ./Terraform/scripts/install-KinD.sh
       - name: Apply Terraform 
         id: apply-terraform 
-        run: sh ./Terraform/terraform-apply.sh
+        working-directory: ./Terraform
+        run: sh .terraform-apply.sh
       - name: Install argoCD
         id: install-argocd
         run: sh ./Manifest/argoCD/install-argocd.sh
