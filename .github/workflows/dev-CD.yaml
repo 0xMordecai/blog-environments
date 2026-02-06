@@ -7,8 +7,3 @@ jobs:
     name: Create Environment
     uses: ./.github/workflows/create-cluster.yaml
     secrets: inherit
-  set-up-argocd:
-    name: Install argoCD
-    needs: [dev-environment-infrastructure]
-    uses: ./.github/workflows/install-argocd.yaml
-    secrets: inherit
