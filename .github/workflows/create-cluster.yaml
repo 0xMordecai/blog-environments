@@ -20,3 +20,11 @@ jobs:
       - name: Check kubectl version
         id: check-kubectl-version
         run: kubectl version
+      - name: Create ArgoCd namespace
+        id: create-argocd-namespace
+        working-directory: ./Manifest/argoCD
+        run: kubectl create namespace argocd
+      - name: Install ArgoCd
+        id: install-argocd
+        working-directory: ./Manifest/argoCD
+        run: kubectl apply -n argocd --server-side --force-conflicts -f ./install.yaml
