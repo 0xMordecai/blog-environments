@@ -57,3 +57,16 @@ spec:
     - protocol: TCP
       port: 27017
       targetPort: 27017
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  lables:
+    app: posts
+spec:
+  replicas: 1
+  selector:
+    matchLables:
+      app: posts
+  template:
+    
