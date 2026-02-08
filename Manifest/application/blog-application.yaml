@@ -4,6 +4,7 @@ metadata:
   name: blog-app
 ---
 apiVersion: apps/v1
+kind: StatefulSet
 metadata:
   name: mongodb
   namespace: blog-app
@@ -69,4 +70,3 @@ spec:
     matchLables:
       app: posts
   template:
-    
