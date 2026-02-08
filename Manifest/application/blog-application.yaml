@@ -70,3 +70,19 @@ spec:
     matchLables:
       app: posts
   template:
+    metadata:
+      lables:
+        app: posts
+    spec:
+      containers:
+        - name: posts
+          image: kings5layer/blog-posts:180808d
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+          env:
+            - name: MONGODB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: mongodb-creds
+                  key: MONGO_INITDB_ROOT_USERNAME
