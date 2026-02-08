@@ -91,3 +91,9 @@ spec:
                 secretKeyRef:
                   name: mongodb-creds
                   key: MONGO_INITDB_ROOT_USERNAME
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: posts
+  namespace: blog-app
