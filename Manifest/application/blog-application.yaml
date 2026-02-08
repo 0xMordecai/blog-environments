@@ -43,4 +43,17 @@ spec:
         resources:
           requests:
             storage: 256Mi
-                
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb
+  namespace: blog-app
+spec: 
+  clusterIP: None
+  selector:
+    app: mongodb
+  ports:
+    - protocol: TCP
+      port: 27017
+      targetPort: 27017
