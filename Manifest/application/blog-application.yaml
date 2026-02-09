@@ -240,3 +240,21 @@ spec:
       port: 5000
       targetPort: 5000
 ---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: blog-app
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: kings5layer/blog-frontend:d9fa4bf
+          imagePullPolicy: Always
