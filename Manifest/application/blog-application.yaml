@@ -137,3 +137,16 @@ spec:
                   name: mongodb-creds
                   key: MONGO_INITDB_ROOT_USERNAME
 ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: reviews
+  namespace: blog-app
+spec:
+  selector:
+    app: reviews
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+---
