@@ -195,3 +195,21 @@ spec:
       port: 5000
       targetPort: 5000
 ---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: users
+  namespace: blog-app
+spec:
+  selector:
+    matchLabels:
+      app: users
+  template:
+    metadata:
+      labels:
+        app: users
+    spec:
+      containers:
+        - name: users
+          image: kings5layer/blog-users:27a3d99
+          imagePullPolicy: Always
