@@ -274,3 +274,10 @@ spec:
     - port: 80
       targetPort: 5000
       protocol: TCP
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: blog-app
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
