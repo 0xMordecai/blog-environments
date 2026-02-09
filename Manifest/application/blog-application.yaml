@@ -150,3 +150,29 @@ spec:
       port: 5000
       targetPort: 5000
 ---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ratings
+  namespace: blog-app
+spec:
+  selector:
+    matchLabels:
+      app: ratings
+  template:
+    metadata:
+      labels:
+        app: ratings
+    spec:
+      containers:
+        - name: ratings
+          image: kings5layer/blog-ratings:8ec0854
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+          env:
+            - name: MONGODB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: mongodb-creds
+                  key: MONGO_INITDB_ROOT_USERNAME
