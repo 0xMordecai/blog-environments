@@ -226,3 +226,17 @@ spec:
                 secretKeyRef:
                   name: mongodb-creds
                   key: MONGO_INITDB_ROOT_USERNAME
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: users
+  namespace: blog-app
+spec:
+  selector:
+    app: users
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+---
