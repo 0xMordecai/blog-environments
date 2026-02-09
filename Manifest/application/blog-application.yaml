@@ -258,3 +258,5 @@ spec:
         - name: frontend
           image: kings5layer/blog-frontend:d9fa4bf
           imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
