@@ -221,3 +221,8 @@ spec:
                 secretKeyRef:
                   name: mongodb-creds
                   key: MONGO_INITDB_ROOT_USERNAME
+            - name: MONGODB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mongodb-creds
+                  key: MONGO_INITDB_ROOT_USERNAME
