@@ -213,3 +213,11 @@ spec:
         - name: users
           image: kings5layer/blog-users:27a3d99
           imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+          env:
+            - name: MONGODB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: mongodb-creds
+                  key: MONGO_INITDB_ROOT_USERNAME
