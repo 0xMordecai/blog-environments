@@ -1,2 +1,9 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
+metadata:
+  name: blog-apps
+  namespace: argocd
+spec:
+  generators:
+    git:
+      repoURL: https://github.com/0xMordecai/blog-environments.git
