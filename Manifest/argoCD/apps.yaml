@@ -21,3 +21,8 @@ spec:
         repoURL: https://github.com/0xMordecai/blog-environments.git
         targetRevision: dev
         path: '{{path}}'
+      destination:
+        server: https://kubernetes.default.svc
+      syncPolicy:
+        automated:
+          selfHeal: true
