@@ -7,3 +7,8 @@ spec:
   generators:
     git:
       repoURL: https://github.com/0xMordecai/blog-environments.git
+      revision: dev
+      directories:
+      - path: manifests/*
+      - path: manifests/argocd
+        exclude: true
