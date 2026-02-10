@@ -10,5 +10,5 @@ spec:
       revision: dev
       directories:
       - path: Manifests/*
-      - path: Manifests/argocd
+      - path: Manifests/argoCD
         exclude: true
