@@ -6,12 +6,12 @@ metadata:
 spec:
   generators:
     - git:
-      repoURL: https://github.com/0xMordecai/blog-environments.git
-      revision: dev
-      directories:
-      - path: Manifests/*
-      - path: Manifests/argoCD
-        exclude: true
+        repoURL: https://github.com/0xMordecai/blog-environments.git
+        revision: dev
+        directories:
+        - path: Manifests/*
+        - path: Manifests/argoCD
+          exclude: true
   template:
     metadata:
       name: '{{path.basename}}'
