@@ -12,3 +12,12 @@ spec:
       - path: Manifests/*
       - path: Manifests/argoCD
         exclude: true
+  template:
+    metadata:
+      name: '{{path.basename}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/0xMordecai/blog-environments.git
+        targetRevision: dev
+        path: '{{path}}'
