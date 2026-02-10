@@ -1,4 +1,9 @@
-name: prod-CD.yaml
+name: Prod branch CD pipeline
 on:
-
+  push:
+    branches: [main]
 jobs:
+  dev-environment-infrastructure:
+    name: Create Environment
+    uses: ./.github/workflows/create-cluster.yaml
+    secrets: inherit
