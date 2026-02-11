@@ -282,8 +282,14 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: "nginx"
 spec:
-  defaultBackend:
-    service:
-      name: frontend
-      port:
-        number: 80
+  rules:
+  - host: blog.application.com
+    http:
+      paths:
+      - path: "/"
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend
+            port:
+              number: 80
