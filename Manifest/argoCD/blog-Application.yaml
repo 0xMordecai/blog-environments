@@ -9,3 +9,6 @@ spec:
     repoURL: https://github.com/0xMordecai/blog-environments.git
     targetRevision: dev
     path: application/
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: blog-app
