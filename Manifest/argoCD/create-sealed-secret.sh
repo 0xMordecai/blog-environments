@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+kubectl create secret generic mongodb-creds \
+    --dry-run=client -o yaml --namespace=blog-app \
+    --from-literal=MONGO_INITDB_ROOT_USERNAME=root \
+    --from-literal=MONGO_INITDB_ROOT_PASSWORD=root \
+    | kubeseal -o yaml > ../application/mongodb-creds-sealed.yaml
