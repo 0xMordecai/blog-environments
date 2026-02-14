@@ -28,7 +28,11 @@ jobs:
         id: install-argocd
         working-directory: ./Manifest/argoCD
         run: kubectl apply -n argocd --server-side --force-conflicts -f ./install.yaml
-      - name: Add ApplicationSet Controller
-        id: add-applicationset-controller
+      - name: Add sealed-secret controller application resource to cluster
+        id: add-sealed-secret
         working-directory: ./Manifest/argoCD
-        run: kubectl apply -n argocd -f ./apps.yaml
+        run: kubectl apply -n argocd -f ./sealed-secrets-controller.yaml
+      - name: Add blog-app application resource to cluster
+        id: add-blog-app
+        working-directory: ./Manifest/argoCD
+        run: kubectl apply -n argocd -f ./blog-Application.yaml  
