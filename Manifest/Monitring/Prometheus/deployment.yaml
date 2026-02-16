@@ -9,3 +9,7 @@ spec:
   selector:
     matchLabels:
       app: prometheus-deployment
+  template:
+    metadata:
+      labels:
+        app: prometheus-deployment
