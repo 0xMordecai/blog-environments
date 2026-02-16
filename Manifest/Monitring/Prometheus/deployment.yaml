@@ -15,7 +15,7 @@ spec:
         app: prometheus-deployment
     spec:
       containers:
-      - image: ankitjodhani/prometheus:v2
+      - image: prom/prometheus:v3.5.1
         name: prometheus
         imagePullPolicy: Always
         ports:
