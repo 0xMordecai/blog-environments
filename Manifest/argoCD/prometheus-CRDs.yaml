@@ -8,3 +8,4 @@ spec:
   source: 
     repoURL: https://github.com/0xMordecai/blog-environments.git
     targetRevision: dev
+    path: Manifest/Monitoring/Prometheus/setup
