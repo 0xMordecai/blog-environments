@@ -9,3 +9,9 @@ spec:
     repoURL: https://github.com/0xMordecai/blog-environments.git
     targetRevision: dev
     path: Manifest/Monitoring/Prometheus/manifest
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: monitoring
+  syncPolicy:
+        automated:
+          selfHeal: true  
