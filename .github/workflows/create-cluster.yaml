@@ -35,4 +35,9 @@ jobs:
       - name: Add blog-app application resource to cluster
         id: add-blog-app
         working-directory: ./Manifest/argoCD
-        run: kubectl apply -n argocd -f ./blog-Application.yaml  
+        run: kubectl apply -n argocd -f ./blog-Application.yaml
+      - name: create monitoring namespace and CRDs
+        id: create-monitoring-namespace-and-CRDs
+        working-directory: ./Manifest/argoCD
+        run: kubectl apply -n argocd -f ./prometheus-CRDs.yaml
+      
