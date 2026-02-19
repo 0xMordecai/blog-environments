@@ -1,9 +1,0 @@
-name: Dev branch CD pipeline
-on: 
-  push:
-    branches: [dev]
-jobs:
-  dev-environment-infrastructure:
-    name: Create Environment
-    uses: ./.github/workflows/create-cluster.yaml
-    secrets: inherit
