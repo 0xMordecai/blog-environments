@@ -44,9 +44,5 @@ jobs:
         id: create-monitoring-namespace-and-CRDs
         working-directory: ./Manifest/argoCD
         run: kubectl apply -n argocd -f ./prometheus-CRDs.yaml
-      - name: Add monitoring components
-        id: Add-monitoring-components
-        working-directory: ./Manifest/argoCD
-        run: kubectl apply -n argocd -f ./monitoring-components.yaml
       
       
