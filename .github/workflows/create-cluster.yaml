@@ -41,7 +41,7 @@ jobs:
         working-directory: ./Manifest/argoCD
         run: kubectl apply -n argocd -f ./prometheus-CRDs.yaml
       - name: create monitoring namespace and CRDs
-        id: create-monitoring-namespace-and-CRDs
+        id: create-monitoring-namespace
         working-directory: ./Manifest/argoCD
         run: kubectl apply -n argocd -f ./prometheus-CRDs.yaml
       
