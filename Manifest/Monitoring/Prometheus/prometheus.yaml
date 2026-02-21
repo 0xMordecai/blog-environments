@@ -2,3 +2,9 @@ apiVersion: monitoring.coreos.com/v1
 kind: Prometheus
 metadata:
   name: prometheus-applications
+spec:
+  evaluationInterval: 30s
+  image: quay.io/prometheus/prometheus:v3.4.1
+  imagePullPolicy: IfNotPresent
+  logFormat: logfmt
+  logLevel: info
