@@ -8,3 +8,13 @@ spec:
   imagePullPolicy: IfNotPresent
   logFormat: logfmt
   logLevel: info
+  nodeSelector:
+    kubernetes.io/os: linux
+  #podMonitorNamespaceSelector: {}
+  #podMonitorSelector:
+  #  matchLabels:
+  #    release: kube-prometheus-stack
+  replicas: 1
+  retention: 30d
+  scrapeInterval: 30s
+  serviceAccountName: prometheus-applications
