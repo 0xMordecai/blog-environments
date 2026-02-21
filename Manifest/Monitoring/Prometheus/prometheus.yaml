@@ -21,3 +21,8 @@ spec:
   serviceMonitorNamespaceSelector:
     matchLabels:
       kubernetes.io/metadata.name: blog-app
+  serviceMonitorSelector:
+    matchLabels:
+      monitoring: prometheus-applications
+  shards: 1
+  version: v3.4.1
