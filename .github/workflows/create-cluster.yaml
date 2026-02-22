@@ -26,7 +26,7 @@ jobs:
         run: kubectl create namespace argocd
       - name: Install ArgoCd
         id: install-argocd
-        working-directory: ./Manifest/argoCD
+        working-directory: ./Manifest/argoCD/sealed-secret
         run: kubectl apply -n argocd --server-side --force-conflicts -f ./install.yaml
       - name: Add sealed-secret controller application resource to cluster
         id: add-sealed-secret
