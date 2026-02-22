@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+
+set -e
+
 # Create the namespace and CRDs, and then wait for them to be available before creating the remaining resources
 kubectl create -f manifests/setup
 
