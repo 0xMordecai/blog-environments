@@ -47,3 +47,18 @@ Infrastructure as Code definitions for cloud resource provisioning:
 - **Purpose:** Declarative infrastructure management
 - **Use Case:** Creating and managing cloud infrastructure resources
 - **Provider:** Likely AWS, GCP, or Azure (configuration details would be in terraform files)
+
+### 3. **GitHub Configuration** (`/.github`)
+
+GitHub-specific settings and workflows:
+
+- **Purpose:** Automations and GitHub Actions configurations
+- **Content:** CI/CD pipelines and repository settings
+
+## Technology Stack
+
+- **Container Orchestration:** Kubernetes
+- **GitOps Tool:** ArgoCD
+- **Secret Management:** Sealed Secrets
+- **Infrastructure as Code:** Terraform
+- **Version Control:** Git
