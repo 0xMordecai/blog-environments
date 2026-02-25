@@ -62,3 +62,14 @@ GitHub-specific settings and workflows:
 - **Secret Management:** Sealed Secrets
 - **Infrastructure as Code:** Terraform
 - **Version Control:** Git
+
+
+## Key Features
+
+✅ **Infrastructure as Code** - Terraform for cloud resource management  
+✅ **Kubernetes Orchestration** - Complete manifest structure for K8s deployments  
+✅ **GitOps Workflow** - ArgoCD integration for continuous deployments  
+✅ **Secure Secrets Management** - Sealed Secrets for encrypted credential storage  
+✅ **Version Controlled** - All configurations tracked in Git
+
+## Use Cases
