@@ -39,3 +39,11 @@ Contains Kubernetes deployment manifests for various services and tools:
 - **Purpose:** Secret management for Kubernetes
 - **Content:** Configuration for encrypting and managing secrets in Git
 - **Use Case:** Securely storing sensitive data in version control
+
+### 2. **Terraform Directory** (`/terraform`)
+
+Infrastructure as Code definitions for cloud resource provisioning:
+
+- **Purpose:** Declarative infrastructure management
+- **Use Case:** Creating and managing cloud infrastructure resources
+- **Provider:** Likely AWS, GCP, or Azure (configuration details would be in terraform files)
