@@ -90,3 +90,4 @@ To use this repository:
    ```bash
    git clone https://github.com/0xMordecai/environments.git
    cd environments
+2. **Review the manifests:**
