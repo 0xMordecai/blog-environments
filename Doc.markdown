@@ -9,3 +9,11 @@ This repository manages infrastructure and deployment configurations for multipl
 **Repository Name:** environments
 
 ## Directory Structure
+environments/
+├── .github/                          # GitHub-specific configurations
+├── .gitignore                        # Git ignore rules
+├── manifests/                        # Kubernetes manifests
+│   ├── argo-cd/                      # ArgoCD deployment configurations
+│   ├── myApi/                        # Custom API service manifests
+│   └── sealed-secrets/               # Sealed Secrets configurations for secret management
+└── terraform/                        # Infrastructure as Code configurations
