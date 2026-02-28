@@ -38,6 +38,14 @@ spec:
             failureThreshold: 3
             initialDelaySeconds: 3
             periodSeconds: 3
+
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 27017
+            failureThreshold: 3
+            initialDelaySeconds: 3
+            periodSeconds: 3
             
           envFrom:
             - secretRef:
