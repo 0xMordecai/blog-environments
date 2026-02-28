@@ -175,6 +175,14 @@ spec:
               memory: "512Mi"
               cpu: "200m"
           
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 5000
+            failureThreshold: 3
+            initialDelaySeconds: 3
+            periodSeconds: 3
+          
           env:
             - name: MONGODB_USERNAME
               valueFrom:
