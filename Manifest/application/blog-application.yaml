@@ -25,6 +25,28 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 27017
+
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "200m"
+
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 27017
+            failureThreshold: 3
+            initialDelaySeconds: 3
+            periodSeconds: 3
+
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 27017
+            failureThreshold: 3
+            initialDelaySeconds: 3
+            periodSeconds: 3
+            
           envFrom:
             - secretRef:
                 name: mongodb-creds
