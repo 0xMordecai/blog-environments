@@ -190,7 +190,7 @@ spec:
             failureThreshold: 3
             initialDelaySeconds: 3
             periodSeconds: 3
-            
+
           env:
             - name: MONGODB_USERNAME
               valueFrom:
@@ -236,6 +236,12 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
+          
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "200m"
+          
           env:
             - name: MONGODB_USERNAME
               valueFrom:
