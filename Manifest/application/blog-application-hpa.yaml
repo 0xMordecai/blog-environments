@@ -38,3 +38,23 @@ spec:
           type: Utilization
           averageUtilization: 60
 ---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: reviews-hpa
+  namespace: blog-app
+spec:
+  scaleTargetRef:
+    apiVersion: apps/1
+    kind: Deployment
+    name: reviews
+  minReplicas: 1
+  maxReplicas: 3
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 60
+---
