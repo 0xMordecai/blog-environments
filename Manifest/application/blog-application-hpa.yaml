@@ -1,0 +1,19 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: mongodb-hpa
+  namespace: blog-app
+spec:
+  scaleTargetRef:
+    apiVersion: apps/1
+    kind: StatefulSet
+    name: mongodb
+  minReplicas: 1
+  maxReplicas: 3
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 60
