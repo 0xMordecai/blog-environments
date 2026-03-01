@@ -29,6 +29,8 @@ spec:
           resources:
             limits:
               memory: "512Mi"
+              cpu: "500m"
+            requests:
               cpu: "200m"
 
           readinessProbe:
@@ -108,6 +110,8 @@ spec:
             limits:
               memory: "512Mi"
               cpu: "200m"
+            requests:
+              cpu: "200m"
 
           readinessProbe:
             httpGet:
@@ -173,6 +177,8 @@ spec:
           resources:
             limits:
               memory: "512Mi"
+              cpu: "200m"
+            requests:
               cpu: "200m"
           
           readinessProbe:
@@ -241,6 +247,8 @@ spec:
             limits:
               memory: "512Mi"
               cpu: "200m"
+            requests:
+              cpu: "200m"
           
           readinessProbe:
             httpGet:
@@ -308,6 +316,8 @@ spec:
             limits:
               memory: "512Mi"
               cpu: "200m"
+            requests:
+              cpu: "200m"
 
           readinessProbe:
             httpGet:
@@ -374,6 +384,8 @@ spec:
           resources:
             limits:
               memory: "512Mi"
+              cpu: "200m"
+            requests:
               cpu: "200m"
           
           readinessProbe:
